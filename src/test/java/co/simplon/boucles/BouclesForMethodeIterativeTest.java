@@ -24,7 +24,7 @@ public class BouclesForMethodeIterativeTest {
 		assertEquals(10, tableau.length);
 		assertEquals(10, tableau[0]);
 		assertEquals(1, tableau[9]);
-	}
+	}; 
 	
 	@Test
 	public void le_tableau_contient_les_10_premiers_entiers_pairs() {

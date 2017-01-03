@@ -23,20 +23,43 @@ public class BouclesFor {
 	}
 
 	public int[] construireTableauInverse() {
-		return null;
+		
+		int[] tableauInverse = new int[10];		
+		for (int i = fin ; i>=debut ; i--) {
+			tableauInverse [-(i - fin)] = i;
+		}
+		
+		return tableauInverse;
 	}
 
 	public int[] construireTableauEntiersPairs() {
-		return null;
+		int[] tableauEntiersPairs = new int[10];
+		int j=0;
+		for (int i = debut ; i<=fin ; i++) {
+			if (i % 2 == 0){	
+			tableauEntiersPairs [ j ] = i;
+			j++;
+			}
+		}
+		return tableauEntiersPairs;
 	}
 
 	private int[] construireTableauAvecBornes() {
-		return null;
+		
+		int[] tableau = new int[10];		
+		for (int i = debut ; i<=fin ; i++) {		
+			tableau [i - debut] = i;
+		}
+		
+		return tableau ;
 	}
 
 	private int[] construireTableauSansBornes() {
-		return null;
+		int [] tableauSansBorne = new int[MAX_SUPPORTED];		
+			
+		return tableauSansBorne;
 	}
+
 
 	public String[] suffixerTableau(String[] tableauEntree, String suffixe) {
 		return null;
