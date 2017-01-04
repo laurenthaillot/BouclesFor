@@ -1,6 +1,6 @@
 package co.simplon.boucles;
 
-public class BouclesFor {
+public class BouclesFor<tableau> {
 	public static final int MAX_SUPPORTED = 100;
 
 	private Integer debut = null;
@@ -23,8 +23,9 @@ public class BouclesFor {
 	}
 
 	public int[] construireTableauInverse() {
+		final int tailletableau = fin-debut +1;
+		int[] tableauInverse = new int[tailletableau];
 		
-		int[] tableauInverse = new int[10];		
 		for (int i = fin ; i>=debut ; i--) {
 			tableauInverse [-(i - fin)] = i;
 		}
@@ -33,7 +34,9 @@ public class BouclesFor {
 	}
 
 	public int[] construireTableauEntiersPairs() {
-		int[] tableauEntiersPairs = new int[10];
+		final int tailletableau = (fin-debut +1)/2;
+		int[] tableauEntiersPairs = new int[tailletableau];
+		
 		int j=0;
 		for (int i = debut ; i<=fin ; i++) {
 			if (i % 2 == 0){	
@@ -45,27 +48,39 @@ public class BouclesFor {
 	}
 
 	private int[] construireTableauAvecBornes() {
+		final int tailletableau = fin-debut +1;
+		int[] tableau = new int[tailletableau];
 		
-		int[] tableau = new int[10];		
 		for (int i = debut ; i<=fin ; i++) {		
 			tableau [i - debut] = i;
 		}
-		
 		return tableau ;
 	}
-
+	
 	private int[] construireTableauSansBornes() {
 		int [] tableauSansBorne = new int[MAX_SUPPORTED];		
 			
 		return tableauSansBorne;
 	}
-
-
+	
 	public String[] suffixerTableau(String[] tableauEntree, String suffixe) {
-		return null;
+		String[] tableau = new String[tableauEntree.length];
+		
+		int i=0;
+		for (String valeur : tableauEntree) {
+			tableau [i] = valeur + suffixe ;
+			i++;
+		}
+		
+		return tableau;
 	}
 
+	
+	
+	
 	public Integer[] applanirMatrice(Integer[][] matrice) {
+		
+		
 		return null;
 	}
 
